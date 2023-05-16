@@ -5,7 +5,8 @@ import HelloWorldVue from './components/HelloWorld.vue';
 import ByeWorldVue from './components/ByeWorld.vue';
 import LoginScreenVue from './components/LoginScreen.vue';
 import axios from "axios";
-import store from './store'
+import store from './store';
+import vue3GoogleLogin from 'vue3-google-login';
 
 
 
@@ -43,6 +44,9 @@ router.afterEach(async(from) => {
     }
 })   
 
+app.use(vue3GoogleLogin, {
+    clientId: '7869761026-kk1jjp94hcb7vp4lsd8ask4vhu4a65pd.apps.googleusercontent.com'
+  })
 app.use(store)
 app.use(router);
 app.mount('#app')

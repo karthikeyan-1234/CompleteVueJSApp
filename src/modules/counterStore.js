@@ -15,7 +15,7 @@ export default{
             state.private_rate = state.private_rate + rate;
         },
         mutateAge(state,age){
-            state.private_age = age;
+            state.private_age = state.private_age + age;
             console.log("Age" + state.private_age);
         }
     },
